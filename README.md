@@ -16,17 +16,10 @@ Scripts to calculate glacier mass balance as part of the IACS RAGMAC Intercompar
 ```
 git clone git@github.com:adehecq/ragmac_xdem.git ragmac_xdem
 cd ragmac_xdem/
-conda env create -f environment.yml  # Optional, mostly xdem need to be installed
-conda activate ragmac_xdem           # Optional
+conda env create -f environment.yml
+conda activate ragmac_xdem
 pip install -e .
 ```
-
-To make sure the latest version of geoutils/xdem is used
-```
-pip uninstall geoutils xdem -y
-pip install git+https://github.com/GlacioHack/GeoUtils.git git+https://github.com/GlacioHack/xdem.git  
-```
-or `pip install -e .` in your own clone of geoutils/xdem (see [instructions](https://github.com/GlacioHack/xdem/wiki/Taking-part-to-a-GlacioHack)).
 
 ### Download data in ./data/raw folder (~23 GB)
 `./scripts/download_data.sh`
